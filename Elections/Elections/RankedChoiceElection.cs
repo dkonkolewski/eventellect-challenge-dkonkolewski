@@ -130,7 +130,7 @@ public class RankedChoiceElection : IElection<IRankedBallot>
     [Conditional("DEBUG")]
     private static void PrintRemovingCandidate(ICandidate loser)
     {
-        Console.WriteLine($"Removing candidate {loser.Id}: {loser.Name}\n\n");
+        Console.WriteLine($"Removing candidate {loser.Id}: {loser.Name}\n");
     }
     
     [Conditional("DEBUG")]
@@ -138,7 +138,7 @@ public class RankedChoiceElection : IElection<IRankedBallot>
     {
         int winningVotes = totalVotesByCandidate[winner];
         float winningPercent = 100.0f * winningVotes / (float) totalVotesThisRound;
-        Console.WriteLine($"A winner has been selected: {winner.Name} with {winningVotes} votes ({winningPercent} %)");
+        Console.WriteLine($"A winner has been selected: {winner.Name} with {winningVotes} votes ({winningPercent} %)\n");
     }
 
     [Conditional("DEBUG")]

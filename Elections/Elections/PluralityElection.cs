@@ -53,6 +53,6 @@ public class PluralityElection : IElection<ISingleVoteBallot>
                 votes =>
                     $"{votes.Key.Id}\t{votes.Key.Name}\t{votes.Value}\t{100.0f * votes.Value / totalVotes}"));
 
-        Console.WriteLine($"PLURALITY ELECTION:\nID\tNAME\t\tVOTES\t%\n{results}\n\n");
+        Console.WriteLine($"PLURALITY ELECTION:\nID\tNAME\t\tVOTES\t%\n{results}\n");
     }
 }
