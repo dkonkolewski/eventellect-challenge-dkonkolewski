@@ -47,5 +47,11 @@ public static class Candidates
         return randomNumber % _writeInFactor == 0;
     }
 
-    private record Candidate(int Id, string Name) : ICandidate, IVoter;
+    private record Candidate(int Id, string Name) : ICandidate, IVoter
+    {
+        public override int GetHashCode()
+        {
+            return Id;
+        }
+    }
 }
